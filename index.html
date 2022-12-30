@@ -1,18 +1,20 @@
 <html>
   <head>
-    <title>My A-Frame Scene</title>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
   </head>
   <body>
     <a-scene>
-      <!-- Add a sky component to display a skybox -->
-      <a-sky src="https://ucarecdn.com/f59f6575-8f2b-4e9f-b2f2-e44cdcf3c3c3/ocean.jpg" />
-      
-      <!-- Add a camera entity to control the perspective of the scene -->
-      <a-entity camera position="0 1.6 0" />
-      
-      <!-- Add a text entity to display a label for the scene -->
-      <a-text value="Sea View" position="0 2 -1" color="#000000"></a-text>
+      <!-- Add a skybox -->
+      <a-sky src="#sky" rotation="0 -90 0"></a-sky>
+
+      <!-- Add a mountain -->
+      <a-obj-model src="#mountain-model" position="0 0 -10" scale="0.01 0.01 0.01"></a-obj-model>
+
+      <!-- Add a person -->
+      <a-entity id="person" position="0 0 -5" rotation="0 180 0">
+        <a-obj-model src="#person-model" scale="0.01 0.01 0.01"></a-obj-model>
+      </a-entity>
     </a-scene>
   </body>
 </html>
+
